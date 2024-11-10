@@ -1,6 +1,6 @@
 .workers {
     padding: 94px 0;
-    background-color: var(--team-background);
+    background-color: $team-background;
 
     &__select {
         box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
@@ -19,7 +19,7 @@
     }
 
     &__title {
-        color: var(--title-color);
+        color: $title-color;
         text-align: center;
         font-size: 36px;
         font-weight: 700;
@@ -29,7 +29,7 @@
     }
 
     &__name {
-        color: var(--title-color);
+        color: $title-color;
         text-align: center;
         font-size: 16px;
         font-weight: 500;
@@ -38,7 +38,7 @@
     }
 
     &__text {
-        color: var(--additional-color);
+        color: $additional-color;
         text-align: center;
         font-size: 16px;
         font-weight: 400;
@@ -50,12 +50,12 @@
 
     &__discription {
         padding-top: 30px;
-        background-color: var(--main-background);
+        background-color: $main-background;
         border-radius: 0px 0px 4px 4px;
     }
 
     &__social {
-        fill: var(--main-svg-fill);
+        fill: $main-svg-fill;
         width: 20px;
         height: 20px;
         transition-property: fill;
@@ -65,7 +65,7 @@
 }
 
 .svg {
-    background-color: var(--main-background);
+    background-color: $main-background;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,9 +89,9 @@
 
 .web__links:hover,
 .web__links:focus {
-    background-color: var(--accent-color);
+    background-color: $accent-color;
 
     .workers__social {
-        fill: var(--main-background);
+        fill: $main-background;
     }
 }

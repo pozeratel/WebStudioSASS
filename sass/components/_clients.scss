@@ -3,7 +3,7 @@
 
     &__title {
         margin-bottom: 50px;
-        color: var(--title-color);
+        color: $title-color;
         text-align: center;
         font-size: 36px;
         font-weight: 700;
@@ -28,7 +28,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 4px;
-        border: 1px solid var(--main-svg-fill);
+        border: 1px solid $main-svg-fill;
         padding: 16px 32px;
         width: 170px;
         height: 92px;
@@ -40,7 +40,7 @@
     &__img {
         width: 106px;
         height: 60px;
-        fill: var(--main-svg-fill);
+        fill: $main-svg-fill;
         transition-property: fill;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -48,10 +48,10 @@
 
     &__links:hover,
     &__links:focus {
-        border-color: var(--accent-color);
+        border-color: $accent-color;
 
         .clients__img {
-            fill: var(--accent-color);
+            fill: $accent-color;
         }
     }
 }

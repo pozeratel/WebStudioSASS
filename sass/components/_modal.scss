@@ -10,7 +10,7 @@
 }
 
 .modal {
-    background-color: var(--main-background);
+    background-color: $main-background;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -18,7 +18,7 @@
     padding: 40px;
 
     &__title {
-        color: var(--title-color);
+        color: $title-color;
         text-align: center;
         font-size: 20px;
         font-weight: 700;
@@ -28,7 +28,7 @@
     }
 
     &__label {
-        color: var(--additional-color);
+        color: $additional-color;
         font-size: 12px;
         font-weight: 400;
         line-height: normal;
@@ -72,11 +72,11 @@
     &__comentt:hover,
     &__comentt:focus {
         border: transparent;
-        outline: 1px solid var(--accent-color);
+        outline: 1px solid $accent-color;
     }
 
     &__span {
-        color: var(--additional-color);
+        color: $additional-color;
         font-size: 14px;
         font-weight: 400;
         line-height: 1.71;
@@ -86,7 +86,7 @@
     }
 
     &__link {
-        color: var(--accent-color);
+        color: $accent-color;
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
@@ -106,7 +106,7 @@
     }
 
     &__btn {
-        color: var(--main-background);
+        color: $main-background;
         text-align: center;
         font-size: 16px;
         font-weight: 700;
@@ -145,7 +145,7 @@
     &__exit {
         width: 11px;
         height: 11px;
-        fill: var(--logo-color);
+        fill: $logo-color;
         transition-property: fill;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -171,19 +171,19 @@
         border: transparent;
 
         .modal__exit {
-            fill: var(--accent-color);
+            fill: $accent-color;
         }
     }
 
     &__input:hover,
     &__input:focus {
         border: transparent;
-        outline: 1px solid var(--accent-color);
+        outline: 1px solid $accent-color;
     }
 
     &__input:hover+&__icon,
     &__input:focus+&__icon {
-        fill: var(--accent-color);
+        fill: $accent-color;
     }
 }
 

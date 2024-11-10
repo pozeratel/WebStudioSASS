@@ -2,7 +2,7 @@
     padding: 94px 0;
 
     &__title {
-        color: var(--title-color);
+        color: $title-color;
         text-align: center;
         font-size: 36px;
         font-weight: 700;
@@ -22,7 +22,7 @@
 }
 
 .pos__text {
-    color: var(--main-background);
+    color: $main-background;
     text-align: center;
     font-size: 14px;
     font-weight: 700;
