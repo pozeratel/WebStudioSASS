@@ -1,0 +1,51 @@
+.charact {
+    padding: 94px 0 0 0;
+
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__select::before {
+        content: "";
+        margin-bottom: 30px;
+        width: 270px;
+        height: 120px;
+        border-radius: 4px;
+        background-color: #F5F4FA;
+        background-image: url(../images/space.png);
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__select:nth-child(1)::before {
+        background-image: url(../images/tv.png);
+    }
+
+    &__select:nth-child(2)::before {
+        background-image: url(../images/clock.png);
+    }
+
+    &__select:nth-child(3)::before {
+        background-image: url(../images/diagram.png);
+    }
+
+    &__title {
+        color: var(--title-color);
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.14;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        color: var(--additional-color);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.71;
+        letter-spacing: 0.42px;
+        margin-top: 10px;
+    }
+}

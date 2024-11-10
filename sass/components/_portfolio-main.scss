@@ -1,0 +1,112 @@
+.port {
+    outline: 1px var(--portfolio-header-line) solid;
+}
+
+.asortie {
+    padding: 94px 0px 94px 0px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 50px;
+    }
+
+    &__all {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__pages {
+        border: 1px solid #EEE;
+        flex-basis: calc((100% - 60px) / 3);
+        overflow: hidden;
+        transition-property: box-shadow;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__pages:hover {
+        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+    }
+
+    &__pages:hover {
+        .pages__label {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+
+    &__btn {
+        color: var(--title-color);
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.62;
+        letter-spacing: 0.48px;
+        border: var(--title-color);
+        border-radius: 4px;
+        padding: 6px 25px;
+        transition-property: color, box-shadow, background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__btn:hover,
+    &__btn:focus {
+        background-color: var(--accent-color);
+        color: var(--main-background);
+        box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.pages {
+    position: relative;
+    overflow: hidden;
+
+    &__name {
+        color: var(--title-color);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 2;
+        letter-spacing: 1.08px;
+    }
+
+    &__text {
+        color: var(--additional-color);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.87;
+        letter-spacing: 0.48px;
+        margin-top: 4px;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(33, 150, 243, 0.90);
+        width: 370px;
+        height: 294px;
+        color: white;
+        opacity: 0;
+        color: var(--main-background);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.55;
+        letter-spacing: 0.54px;
+        padding: 63px 24px;
+        transform: translate(0, 100%);
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__discription {
+        padding: 20px 24px 20px 24px;
+    }
+}
