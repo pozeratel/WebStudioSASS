@@ -12,10 +12,7 @@
     }
 
     &__conteiner {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex($direction:column);
     }
 
     &__list {
@@ -24,9 +21,7 @@
     }
 
     &__links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex;
         border-radius: 4px;
         border: 1px solid $main-svg-fill;
         padding: 16px 32px;

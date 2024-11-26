@@ -8,6 +8,7 @@
         font-weight: 700;
         line-height: 1.16;
         letter-spacing: 1.08px;
+        @include fonts($size: 36px, $weight: 700, $height: 1.16, $space: 1.08px);
         margin-bottom: 50px;
     }
 
@@ -24,10 +25,7 @@
 .pos__text {
     color: $main-background;
     text-align: center;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.14;
-    letter-spacing: 0.42px;
+    @include fonts($weight: 700, $height: 1.14);
     text-transform: uppercase;
 }
 
@@ -35,9 +33,7 @@
     width: 370px;
     height: 70px;
     background: rgba(47, 48, 58, 0.80);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
+    @include flex;
     top: 224px;
 }

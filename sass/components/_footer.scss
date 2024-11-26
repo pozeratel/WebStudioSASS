@@ -15,10 +15,7 @@
 
     &__logo {
         color: $main-background;
-        font-size: 26px;
-        font-weight: 700;
-        line-height: 1.38;
-        letter-spacing: 0.78px;
+        @include fonts($size: 26px, $weight: 700, $height: 1.38, $space: 0.78px);
         font-family: "Raleway";
         margin-bottom: 20px;
     }
@@ -29,10 +26,7 @@
 
     &__location {
         color: $main-background;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.71;
-        letter-spacing: 0.42px;
+        @include fonts;
         text-decoration: none;
     }
 
@@ -68,9 +62,7 @@
         width: 44px;
         height: 44px;
         background-color: rgba(255, 255, 255, 0.10);
-        transition-property: background-color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitioned(background-color);
     }
 
     &__links:hover,
@@ -95,10 +87,7 @@
 
 .form__lable {
     color: $main-background;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.16;
-    letter-spacing: 0.42px;
+    @include fonts($height: 1.16);
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -116,19 +105,13 @@
     background: rgba(33, 150, 243, 0.00);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     color: rgba(255, 255, 255, 0.60);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.25;
-    letter-spacing: 0.48px;
+    @include fonts($size: 16px, $height: 1.25, $space: 0.48px);
 }
 
 .form__btn {
     color: $main-background;
     text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.87;
-    letter-spacing: 0.96px;
+    @include fonts($size: 16px, $weight: 700, $height: 1.87, $space: 0.96px);
     padding: 10px 28px;
     border-radius: 4px;
     background: $accent-color;
@@ -157,10 +140,7 @@
     &__contacts {
         color: rgba(255, 255, 255, 0.60);
         font-style: normal;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.71;
-        letter-spacing: 0.42px;
+        @include fonts;
         text-decoration: none;
     }
 

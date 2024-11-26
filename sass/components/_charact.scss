@@ -12,7 +12,7 @@
         width: 270px;
         height: 120px;
         border-radius: 4px;
-        background-color:$team-background;
+        background-color: $team-background;
         background-image: url(../images/space.png);
         display: block;
         background-repeat: no-repeat;
@@ -37,15 +37,13 @@
         font-weight: 700;
         line-height: 1.14;
         letter-spacing: 0.42px;
+        @include fonts($weight: 700, $height: 1.71);
         text-transform: uppercase;
     }
 
     &__text {
         color: $additional-color;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.71;
-        letter-spacing: 0.42px;
+        @include fonts;
         margin-top: 10px;
     }
 }

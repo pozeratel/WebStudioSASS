@@ -14,15 +14,10 @@
 
     &__links {
         color: $additional-color;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.14;
-        letter-spacing: 0.28px;
+        @extend %links-header;
         display: flex;
         align-items: center;
-        transition-property: color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitioned(color);
     }
 
     &__links:hover,
@@ -46,9 +41,7 @@
         width: 16px;
         height: 12px;
         margin: 0 10px 0 0;
-        transition-property: fill;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitioned($property:fill);
     }
 }
 
@@ -79,13 +72,8 @@
 
     &__links {
         color: $title-color;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.14;
-        letter-spacing: 0.28px;
-        transition-property: color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @extend %links-header;
+        @include transitioned(color);
     }
 
     &__links:hover,

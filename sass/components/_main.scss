@@ -9,10 +9,7 @@
     padding: 200px 0;
 
     &__box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include flex($direction:column);
     }
 
     &__title {
@@ -22,6 +19,7 @@
         font-weight: 900;
         line-height: 1.36;
         letter-spacing: 2.64px;
+        @include fonts($size: 44px, $weight: 900, $height: 1.36, $space: 2.64px);
         text-transform: uppercase;
         width: 696px;
     }
@@ -34,6 +32,7 @@
         font-weight: 700;
         line-height: 1.87;
         letter-spacing: 0.96px;
+        @include fonts($size: 16px, $weight: 700, $height: 1.87, $space: 0.96px);
         margin-top: 30px;
         padding: 10px 32px;
         border: none;

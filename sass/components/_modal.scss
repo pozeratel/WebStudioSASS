@@ -20,10 +20,7 @@
     &__title {
         color: $title-color;
         text-align: center;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: 0.6px;
+        @include fonts($size: 20px, $weight: 700, $height: normal, $space: 0.6px);
         margin-bottom: 12px;
     }
 
@@ -33,6 +30,7 @@
         font-weight: 400;
         line-height: normal;
         letter-spacing: 0.12px;
+        @include fonts($size: 12px, $height: normal, $space: 0.12px);
     }
 
     &__input {
@@ -44,9 +42,7 @@
         margin-bottom: 10px;
         display: block;
         padding: 0 0 0 40px;
-        transition-property: outline;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitioned($property: outline);
     }
 
     &__comentt {
@@ -64,9 +60,7 @@
         padding: 12px 16px;
         margin: 4px 0 25px 0;
         display: block;
-        transition-property: outline;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitioned($property: outline);
     }
 
     &__comentt:hover,
@@ -91,6 +85,7 @@
         font-weight: 400;
         line-height: 24px;
         letter-spacing: 0.42px;
+        @include fonts($height: 24px);
         text-decoration-line: underline;
     }
 
@@ -108,12 +103,9 @@
     &__btn {
         color: $main-background;
         text-align: center;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 1.87;
-        letter-spacing: 0.96px;
+        @include fonts($size: 16px, $weight: 700, $height: 1.87, $space: 0.96px);
         border-radius: 4px;
-        background: var(--accent-color);
+        background: $accent-color;
         padding: 10px 52px;
         border: none;
         margin: 30px 124px 0px 124px;
@@ -133,9 +125,7 @@
         height: 30px;
         border-radius: 50%;
         border: 1px solid rgba(0, 0, 0, 0.10);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex($direction: row);
         position: absolute;
         top: 8px;
         left: 490px;
@@ -146,9 +136,7 @@
         width: 11px;
         height: 11px;
         fill: $logo-color;
-        transition-property: fill;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitioned($property: fill)
     }
 
     &__icon {
@@ -157,9 +145,7 @@
         position: absolute;
         top: 11px;
         left: 10px;
-        transition-property: fill;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitioned($property: fill)
     }
 
     &__box {

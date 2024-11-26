@@ -13,9 +13,7 @@
     }
 
     &__list {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
+        @include flex($justify:space-between);
     }
 
     &__title {
@@ -25,6 +23,7 @@
         font-weight: 700;
         line-height: 1.16;
         letter-spacing: 1.08px;
+        @include fonts($size: 36px, $weight: 700, $height: 1.16, $space: 1.08px);
         margin-bottom: 58px;
     }
 
@@ -35,6 +34,7 @@
         font-weight: 500;
         line-height: 1.18;
         letter-spacing: 0.48px;
+        @include fonts($size: 16px, $weight: 500, $height: 1.18, $space: 0.48px);
     }
 
     &__text {
@@ -44,6 +44,7 @@
         font-weight: 400;
         line-height: 1.18;
         letter-spacing: 0.48px;
+        @include fonts($size: 16px, $weight: 400, $height: 1.18, $space: 0.48px);
         margin-top: 10px;
         margin-bottom: 16px;
     }
@@ -58,9 +59,7 @@
         fill: $main-svg-fill;
         width: 20px;
         height: 20px;
-        transition-property: fill;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @include transitioned($property: fill);
     }
 }
 
@@ -82,9 +81,7 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    transition-property: background-color, border-radius;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include transitioned($property: background-color border-radius);
 }
 
 .web__links:hover,
