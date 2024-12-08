@@ -1,13 +1,15 @@
 .wawd {
     padding: 94px 0;
+    text-align: center;
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
 
     &__title {
         color: $title-color;
         text-align: center;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 1.16;
-        letter-spacing: 1.08px;
         @include fonts($size: 36px, $weight: 700, $height: 1.16, $space: 1.08px);
         margin-bottom: 50px;
     }

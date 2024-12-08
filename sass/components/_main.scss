@@ -6,22 +6,28 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 200px 0;
+    padding: 118px 0;
+
+    @media screen and (min-width:1200px) {
+        padding: 200px 0;
+    }
 
     &__box {
-        @include flex($direction:column);
+        @include flex($direction: column);
     }
 
     &__title {
         color: $main-background;
         text-align: center;
-        font-size: 44px;
-        font-weight: 900;
-        line-height: 1.36;
-        letter-spacing: 2.64px;
-        @include fonts($size: 44px, $weight: 900, $height: 1.36, $space: 2.64px);
+        @include fonts($size: 26px, $weight: 900, $height: 1.61, $space: 1.56px);
         text-transform: uppercase;
-        width: 696px;
+        width: 100%;
+        margin: 0 auto;
+
+        @media screen and (min-width:1200px) {
+            @include fonts($size: 44px, $weight: 900, $height: 1.36, $space: 2.64px);
+            width: 680px;
+        }
     }
 
     &__btn {

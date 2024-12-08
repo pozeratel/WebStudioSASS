@@ -1,22 +1,86 @@
 .header {
-    padding: 24px 0px 25px 0px;
-
     &__top {
         display: flex;
         align-items: center;
+        padding: 16px 15px;
+
+        @media screen and (min-width:768px) {
+            padding: 21px 15px;
+        }
+
+        @media screen and (min-width:1200px) {
+            padding: 25px 15px;
+        }
+    }
+
+    &__nav {
+        display: none;
+
+        @media screen and (min-width:768px) {
+            display: block;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 50px;
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__link {
+        color: $title-color;
+        @extend %links-header;
+        @include transitioned(color);
+
+        @media screen and (min-width:768px) {
+            font-size: 14px;
+            letter-spacing: 0.28px;
+        }
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: $accent-color;
     }
 
     &__contacts {
-        display: flex;
-        gap: 50px;
+        display: none;
+        gap: 30px;
         margin-left: auto;
+
+        @media screen and (min-width:768px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 10px;
+        }
+
+        @media screen and (min-width:1200px) {
+            gap: 30px;
+            display: flex;
+            flex-direction: row;
+        }
     }
 
     &__links {
         color: $additional-color;
         @extend %links-header;
-        display: flex;
-        align-items: center;
+        display: none;
+
+        @media screen and (min-width:768px) {
+            display: flex;
+            align-items: center;
+            row-gap: 10px;
+        }
+
+        @media screen and (min-width:1200px) {
+            font-size: 14px;
+            letter-spacing: 0.28px;
+        }
+
         @include transitioned(color);
     }
 
@@ -41,46 +105,52 @@
         width: 16px;
         height: 12px;
         margin: 0 10px 0 0;
-        @include transitioned($property:fill);
+        @include transitioned($property: fill);
+    }
+
+    &__button {
+        display: flex;
+        margin-left: auto;
+        width: 40px;
+        height: 40px;
+
+        @media screen and (min-width:786px) {
+            display: none;
+        }
+    }
+
+    &__burger {
+        display: flex;
+        fill: black;
+        width: 40px;
+        height: 40px;
     }
 }
 
 .logo {
     color: $logo-color;
     font-family: "Raleway";
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.38;
-    letter-spacing: 0.78px;
-    margin-right: 93px;
+    letter-spacing: 0.72px;
+    margin-right: auto;
+
+    @media screen and (min-width:768px) {
+        margin-right: 88px;
+    }
+
+    @media screen and (min-width:1200px) {
+        font-size: 26px;
+        letter-spacing: 0.78;
+        margin-right: 93px;
+    }
 
     &__color {
         color: $accent-color;
     }
 }
 
-
-.nav {
-    &__list {
-        display: flex;
-        gap: 50px;
-    }
-
-    &__item {
-        position: relative;
-    }
-
-    &__links {
-        color: $title-color;
-        @extend %links-header;
-        @include transitioned(color);
-    }
-
-    &__links:hover,
-    &__links:focus {
-        color: $accent-color;
-    }
-}
 
 .curent {
     color: $accent-color;

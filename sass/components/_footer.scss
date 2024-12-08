@@ -5,12 +5,32 @@
     &__box {
         display: flex;
         flex-direction: column;
-        margin-right: 70px;
+        width: 231px;
+        text-align: center;
+
+        @media screen and (min-width: 1200px) {
+            text-align: start;
+        }
     }
 
     &__full {
         display: flex;
-        align-items: baseline;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 60px;
+        text-align: center;
+
+        @media screen and (min-width: 1200px) {
+            text-align: start;
+            flex-wrap: nowrap;
+            gap: 0;
+        }
+
+        @media screen and (min-width: 768px) {
+            align-items: baseline;
+            flex-direction: row;
+
+        }
     }
 
     &__logo {
@@ -28,11 +48,22 @@
         color: $main-background;
         @include fonts;
         text-decoration: none;
+        width: 231px;
     }
 
     &__social {
         display: flex;
         flex-direction: column;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            margin-left: 105px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            margin-left: 70px;
+            text-align: start;
+        }
     }
 
     &__join {
@@ -42,10 +73,6 @@
         line-height: 1.14;
         letter-spacing: 0.42px;
         text-transform: uppercase;
-    }
-
-    &__text {
-        display: flex;
     }
 
     &__list {
@@ -76,64 +103,95 @@
         height: 20px;
     }
 
+    &__case {
+        text-align: center;
+
+        @media screen and (max-width: 1199px) {
+            width: 100%;
+        }
+
+        @media screen and (min-width: 1200px) {
+            margin-left: 93px;
+            text-align: start;
+        }
+    }
+
     &__form {
         display: flex;
         flex-direction: column;
-        margin-left: 93px;
+        gap: 20px;
+        align-items: center;
+
+        @media screen and (min-width:1200px) {
+            gap: 12px;
+            align-items: baseline;
+        }
     }
-}
 
+    &__lable {
+        color: $main-background;
+        @include fonts($height: 1.16);
+        text-transform: uppercase;
+    }
 
+    &__wraper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
 
-.form__lable {
-    color: $main-background;
-    @include fonts($height: 1.16);
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
+        @media screen and (min-width: 1200px) {
+            gap: 12px;
+        }
+    }
 
-.form__box {
-    display: flex;
-}
+    &__input {
+        padding: 15px 0 15px 16px;
+        width: 358px;
+        height: 50px;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.30);
+        background: rgba(33, 150, 243, 0.00);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        color: rgba(255, 255, 255, 0.60);
+        @include fonts($size: 16px, $height: 1.25, $space: 0.48px);
+        width: 100%;
 
-.form__input {
-    padding: 15px 0 15px 16px;
-    width: 358px;
-    height: 50px;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.30);
-    background: rgba(33, 150, 243, 0.00);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    color: rgba(255, 255, 255, 0.60);
-    @include fonts($size: 16px, $height: 1.25, $space: 0.48px);
-}
+        @media screen and (min-width:480px) {
+            width: 450px;
+        }
 
-.form__btn {
-    color: $main-background;
-    text-align: center;
-    @include fonts($size: 16px, $weight: 700, $height: 1.87, $space: 0.96px);
-    padding: 10px 28px;
-    border-radius: 4px;
-    background: $accent-color;
-    border: none;
-    display: flex;
-    align-items: center;
-    margin-left: 12px;
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+        @media screen and (min-width:1200px) {
+            width: 358px;
+        }
+    }
 
-.form__btn:hover,
-.form__btn:focus {
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-}
+    &__btn {
+        color: $main-background;
+        text-align: center;
+        @include fonts($size: 16px, $weight: 700, $height: 1.87, $space: 0.96px);
+        padding: 10px 28px;
+        border-radius: 4px;
+        background: $accent-color;
+        border: none;
+        display: flex;
+        align-items: center;
+        transition-property: box-shadow;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-.form__svg {
-    width: 24px;
-    height: 24px;
-    fill: $main-background;
-    margin-left: 10px;
+    &__btn:hover,
+    &__btn:focus {
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    &__svg {
+        width: 24px;
+        height: 24px;
+        fill: $main-background;
+        margin-left: 10px;
+    }
 }
 
 .address {
