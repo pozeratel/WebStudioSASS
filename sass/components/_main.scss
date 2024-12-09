@@ -24,6 +24,10 @@
         width: 100%;
         margin: 0 auto;
 
+        @media screen and (min-width:768px) {
+            width: 360px;
+        }
+
         @media screen and (min-width:1200px) {
             @include fonts($size: 44px, $weight: 900, $height: 1.36, $space: 2.64px);
             width: 680px;

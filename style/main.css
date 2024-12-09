@@ -202,7 +202,7 @@ img {
   width: 40px;
   height: 40px;
 }
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   .header__button {
     display: none;
   }
@@ -318,6 +318,11 @@ img {
   text-transform: uppercase;
   width: 100%;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    width: 360px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -1011,11 +1016,13 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 90%;
   gap: 20px;
 }
 @media screen and (min-width: 1200px) {
   .footer__wraper {
     gap: 12px;
+    width: 100%;
   }
 }
 .footer__input {

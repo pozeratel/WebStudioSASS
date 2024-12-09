@@ -138,10 +138,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        width: 90%;
         gap: 20px;
 
         @media screen and (min-width: 1200px) {
             gap: 12px;
+            width: 100%;
         }
     }
 
