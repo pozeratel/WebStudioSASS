@@ -3,14 +3,32 @@
 }
 
 .asortie {
-    padding: 94px 0px 94px 0px;
+    padding: 60px 0;
+
+    @media screen and (min-width:768px) {
+        padding: 94px 0;
+    }
+
+    @media screen and (min-width:1200px) {
+        padding: 94px 0;
+    }
 
     &__list {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-wrap: wrap;
+
+        @media screen and (min-width:768px) {
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        @media screen and (min-width:1200px) {
+            margin-bottom: 48px;
+        }
+
         gap: 8px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
 
     &__all {
@@ -21,7 +39,16 @@
 
     &__pages {
         border: 1px solid #EEE;
-        flex-basis: calc((100% - 60px) / 3);
+        flex-basis: calc(100% / 1);
+
+        @media screen and (min-width:768px) {
+            flex-basis: calc((100% - 30px) / 2);
+        }
+
+        @media screen and (min-width:1200px) {
+            flex-basis: calc((100% - 60px) / 3);
+        }
+
         overflow: hidden;
         @include transitioned($property: box-shadow)
     }

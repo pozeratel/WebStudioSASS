@@ -21,15 +21,15 @@
         <div class="container header__top ">
             <a href="#" class="logo"><span class="logo__color">Web</span>Studio</a>
             <nav class="header__nav">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a class="nav__links" href="../index.html">Студія</a>
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a class="header__link" href="../index.html">Студія</a>
                     </li>
-                    <li class="nav__item">
-                        <a class="nav__links curent" href="../pages/portfolio.html">Портфоліо</a>
+                    <li class="header__item">
+                        <a class="header__link curent" href="../pages/portfolio.html">Портфоліо</a>
                     </li>
-                    <li class="nav__item">
-                        <a class="nav__links" href="#">Контакти</a>
+                    <li class="header__item">
+                        <a class="header__link" href="#">Контакти</a>
                     </li>
                 </ul>
             </nav>
@@ -248,17 +248,19 @@
                     </li>
                 </ul>
             </div>
-            <form class="footer__form">
-                <label for="sub" class="form__lable">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</label>
-                <div class="form__box">
-                    <input type="email" id="sub" class="form__input" placeholder="E-mail" required>
-                    <button type="submit" class="form__btn"> Підписатися
-                        <svg class="form__svg">
-                            <use href="../images/symbol-defs.svg#send"></use>
-                        </svg>
-                    </button>
-                </div>
-            </form>
+            <div class="footer__case">
+                <form class="footer__form">
+                    <b class="footer__lable">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</b>
+                    <div class="footer__wraper">
+                        <input type="email" id="sub" class="footer__input" placeholder="E-mail" required>
+                        <button type="submit" class="footer__btn"> Підписатися
+                            <svg class="footer__svg">
+                                <use href="../images/symbol-defs.svg#send"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </footer>
 </body>
