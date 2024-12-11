@@ -1124,7 +1124,10 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 8px;
+  row-gap: 15px;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
   margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
@@ -1136,6 +1139,7 @@ img {
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 30px;
+    row-gap: 8px;
   }
 }
 @media screen and (min-width: 1200px) {
