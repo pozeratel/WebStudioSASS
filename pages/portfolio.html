@@ -17,16 +17,21 @@
 </head>
 
 <body>
-    <header class="header port">
-        <div class="container header__top ">
+    <header class="header">
+        <div class="container header__top">
             <a href="#" class="logo"><span class="logo__color">Web</span>Studio</a>
-            <nav class="header__nav">
+            <button data-modal-header-open class="header__btn" type="button">
+                <svg class="header__menu">
+                    <use href="../images/symbol-defs.svg#menu"></use>
+                </svg>
+            </button>
+            <nav class="header__nav ">
                 <ul class="header__list">
                     <li class="header__item">
-                        <a class="header__link" href="../index.html">Студія</a>
+                        <a class="header__link curent" href="../index.html">Студія</a>
                     </li>
                     <li class="header__item">
-                        <a class="header__link curent" href="../pages/portfolio.html">Портфоліо</a>
+                        <a class="header__link" href="../pages/portfolio.html">Портфоліо</a>
                     </li>
                     <li class="header__item">
                         <a class="header__link" href="#">Контакти</a>
@@ -34,13 +39,14 @@
                 </ul>
             </nav>
             <ul class="header__contacts">
-                <li class="header__items">
+                <li class="header__item">
                     <a href="mailto;info@devstudio.com" class="header__links">
                         <svg class="header__mail">
                             <use class="mail__svg" href="../images/symbol-defs.svg#envelope"></use>
-                        </svg> info@devstudio.com</a>
+                        </svg>
+                        info@devstudio.com</a>
                 </li>
-                <li class="header__items">
+                <li class="header__item">
                     <a href="tel:+380961111111" class="header__links tel__link">
                         <svg class="tel">
                             <use class="tel__svg" href="../images/symbol-defs.svg#tel"></use>
@@ -49,6 +55,38 @@
                     </a>
                 </li>
             </ul>
+            <div data-header-modal class="menu is-hidden">
+                <button data-modal-header-close class="menu__btn" type="button">
+                    <svg class="menu__close">
+                        <use href="../images/symbol-defs.svg#cross"></use>
+                    </svg>
+                </button>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="../index.html" class="menu__link">Студія</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="../pages/portfolio.html" class="menu__link">Портфоліо</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Контакти</a>
+                    </li>
+                </ul>
+                <div class="menu__position">
+                    <ul class="menu__list-contact">
+                        <li class="menu__item-contact"><a href="tel:+380961111111" class="menu__link-contact">+38 096
+                                111 11 11</a></li>
+                        <li class="menu__item-contact"><a href="mailto:info@devstudio.com"
+                                class="menu__link-contact">info@devstudio.com</a></li>
+                    </ul>
+                    <ul class="menu__list-social">
+                        <li class="menu__item-social"><a href="" class="menu__link-social">Instagram</a></li>
+                        <li class="menu__item-social"><a href="" class="menu__link-social">Twitter</a></li>
+                        <li class="menu__item-social"><a href="" class="menu__link-social">Facebook</a></li>
+                        <li class="menu__item-social"><a href="" class="menu__link-social">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
     <main class="portfolio-main">
@@ -263,6 +301,7 @@
             </div>
         </div>
     </footer>
+    <script src="../js/menu.js"></script>
 </body>
 
 </html>

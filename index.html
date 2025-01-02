@@ -20,6 +20,11 @@
     <header class="header">
         <div class="container header__top">
             <a href="#" class="logo"><span class="logo__color">Web</span>Studio</a>
+            <button data-modal-header-open class="header__btn" type="button">
+                <svg class="header__menu">
+                    <use href="./images/symbol-defs.svg#menu"></use>
+                </svg>
+            </button>
             <nav class="header__nav ">
                 <ul class="header__list">
                     <li class="header__item">
@@ -50,11 +55,38 @@
                     </a>
                 </li>
             </ul>
-            <button type="submit" class="header__button">
-                <svg class="header__burger">
-                    <use href="./images/symbol-defs.svg#menu"></use>
-                </svg>
-            </button>
+            <div data-header-modal class="menu is-hidden">
+                <button data-modal-header-close class="menu__btn" type="button">
+                    <svg class="menu__close">
+                        <use href="./images/symbol-defs.svg#cross"></use>
+                    </svg>
+                </button>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="./index.html" class="menu__link">Студія</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="./pages/portfolio.html" class="menu__link">Портфоліо</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Контакти</a>
+                    </li>
+                </ul>
+                <div class="menu__position">
+                    <ul class="menu__list-contact">
+                        <li class="menu__item-contact"><a href="tel:+380961111111" class="menu__link-contact">+38 096
+                                111 11 11</a></li>
+                        <li class="menu__item-contact"><a href="mailto:info@devstudio.com"
+                                class="menu__link-contact">info@devstudio.com</a></li>
+                    </ul>
+                    <ul class="menu__list-social">
+                        <li class="menu__item-social"><a href="" class="menu__link-social">Instagram</a></li>
+                        <li class="menu__item-social"><a href="" class="menu__link-social">Twitter</a></li>
+                        <li class="menu__item-social"><a href="" class="menu__link-social">Facebook</a></li>
+                        <li class="menu__item-social"><a href="" class="menu__link-social">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
     <main class="main">
@@ -442,6 +474,7 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>
