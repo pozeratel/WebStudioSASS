@@ -2,19 +2,11 @@
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.40),
             rgba(47, 48, 58, 0.40)),
-        url("/images/mobile/studiabg-mobile@1x.webp");
+        url("../images/mobile/studiabg-mobile@1x.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding: 118px 0;
-
-    @media screen and (min-width:1200px) {
-        padding: 200px 0;
-    }
-
-    &__box {
-        @include flex($direction: column);
-    }
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -24,10 +16,14 @@
             url(../images/mobile/studiabg-mobile@2x.webp);
     }
 
+    &__box {
+        @include flex($direction: column);
+    }
+
     @media screen and (min-width:768px) {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),
-            url(/images/tablet/studiabg-tablet@1x.webp);
+            url(../images/tablet/studiabg-tablet@1x.webp);
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
