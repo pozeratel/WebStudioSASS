@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Roboto";
   -webkit-box-sizing: border-box;
@@ -1253,6 +1254,7 @@ img {
 
 .asortie {
   padding: 60px 0;
+  background-color: green;
 }
 @media screen and (min-width: 768px) {
   .asortie {
@@ -1305,7 +1307,7 @@ img {
   border: 1px solid #EEE;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  overflow: hidden;
+  position: relative;
   -webkit-transition-property: -webkit-box-shadow;
   transition-property: -webkit-box-shadow;
   transition-property: box-shadow;
@@ -1326,6 +1328,21 @@ img {
     -ms-flex-preferred-size: calc((100% - 60px) / 3);
         flex-basis: calc((100% - 60px) / 3);
   }
+}
+.asortie__pages::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 101%;
+  height: 25%;
+  z-index: 0;
+  /* Висота хвилі */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23FFC107" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,144C384,160,480,160,576,133.3C672,107,768,53,864,48C960,43,1056,85,1152,96C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat center;
+  top: -90px;
+  left: -2px;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 .asortie__pages:hover {
   -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
